@@ -13,13 +13,6 @@ public class Customer {
 
     public Customer(){}
 
-    public Customer(Long id, String name, String city, List<Subscriber> subscribers) {
-        this.id = id;
-        this.name = name;
-        this.city = city;
-        this.subscribers = subscribers;
-    }
-
     public List<Subscriber> getSubscribers() {
         return subscribers;
     }

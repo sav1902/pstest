@@ -3,15 +3,11 @@ package com.peterservice.pstest.common;
 /**
  * Created by Andrey.Shilov on 17.11.2015.
  */
-public class Subscriber extends Object {
+public class Subscriber {
     private String msisdn;
     private String ratePlan;
 
     public Subscriber(){}
-    public Subscriber(String msisdn, String ratePlan) {
-        this.msisdn = msisdn;
-        this.ratePlan = ratePlan;
-    }
 
     public String getMsisdn(){
         return this.msisdn;
@@ -27,10 +23,5 @@ public class Subscriber extends Object {
 
     public void setRatePlan(String ratePlan){
         this.ratePlan = ratePlan;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return this.msisdn.equals(((Subscriber)obj).msisdn);
     }
 }
