@@ -59,8 +59,9 @@ public class SomeServletTest {
 
     @Test
     public void testPost() throws IOException {
-
-        HttpURLConnection http = (HttpURLConnection)new URL("http://localhost:8088/pstest-1.0-SNAPSHOT").openConnection();
+        // Add customer. Using method POST
+        HttpURLConnection http = (HttpURLConnection)new URL("http://localhost:8088/pstest/customers").openConnection();
+        http.setRequestMethod("POST");
         http.setDoOutput(true);
         OutputStreamWriter out = new OutputStreamWriter(http.getOutputStream());
         out.write(customerPost);
@@ -75,7 +76,9 @@ public class SomeServletTest {
 
     @Test
     public void testGet() throws IOException {
-        HttpURLConnection http = (HttpURLConnection)new URL("http://localhost:8088/pstest-1.0-SNAPSHOT?customerId=1").openConnection();
+        // Get customer. Using method GET
+        HttpURLConnection http = (HttpURLConnection)new URL("http://localhost:8088/pstest/customers?customerId=1").openConnection();
+        http.setRequestMethod("POST");
         http.setDoOutput(true);
         http.connect();
 
